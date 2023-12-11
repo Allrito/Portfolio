@@ -17,7 +17,7 @@ const Logo = () => {
     }, []);
 
     useEffect(() => {
-        if (renderSVG) {
+        if (renderSVG && outlineLogoRef.current) {
             gsap.timeline()
                 .to(bgRef.current, {
                     duration: 1,
@@ -26,6 +26,11 @@ const Logo = () => {
                 .from(outlineLogoRef.current, {
                     drawSVG: 0,
                     duration: 12,
+                })
+                .to(outlineLogoRef.current, {
+                    stroke: 'transparent',
+                    duration: 0.5,
+                    delay: -6.5
                 });
 
             gsap.fromTo(
