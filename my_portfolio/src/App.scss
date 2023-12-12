@@ -1,10 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Handjet&family=Orbitron&family=Tourney&display=swap');
-
 $primary-color : #ffd700;
 
+@import '../node_modules/loaders.css/src/animations/pacman.scss';
+@import url('https://fonts.googleapis.com/css2?family=Handjet&family=Orbitron&family=Tourney&display=swap');
 @import 'animate.css';
+
+
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('./assets/fonts/Orbitron-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tourney';
+  src: url('./assets/fonts/Tourney-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Handjet';
+  src: url('./assets/fonts/Handjet-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 input,
 textarea {
   font-family: 'Tourney', cursive; 
+}
+
+.loader-active {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  animation: fadeOut 1s 1s;
+  animation-fill-mode: forwards;
 }
