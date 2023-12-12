@@ -9,13 +9,9 @@ const About = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
     useEffect(() => {
-        const timerId = setTimeout(() => {
+        setTimeout(() => {
             setLetterClass('text-animate-hover')
-        }, 2800);
-    
-        return () => {
-            clearTimeout(timerId);
-        };
+        }, 3000);
     }, []);
 
     return (
