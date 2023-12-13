@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -19,6 +19,7 @@
     "@mantine/notifications": "^7.1.0",
     "animate.css": "^4.1.1",
     "gsap-trial": "^3.12.3",
+    "leaflet": "^1.9.4",
     "loaders.css": "^0.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -28,6 +29,7 @@
     "sass": "^1.68.0"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.8",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

@@ -3,10 +3,13 @@ import "./index.scss"
 import AnimatedLetters from "../AnimatedLetters"
 import { useState, useEffect, useRef } from "react"
 import emailjs from '@emailjs/browser';
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import 'leaflet/dist/leaflet.css';
 
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
     const form = useRef() as any
+    const position: [number, number] = [43.607891865606824, 3.886308068664881]
 
     useEffect(() => {
         setTimeout(() => {
@@ -18,14 +21,14 @@ const Contact = () => {
         e.preventDefault();
 
         emailjs.sendForm('', '', form.current, '')
-        .then((result) => {
-            console.log(result.text);
-            alert('Message successfully sent!')
-            window.location.reload(false)
-        }, (error) => {
-            console.log(error.text);
-            alert('Failed to send the message, please try again')
-        });
+            .then((result) => {
+                console.log(result.text);
+                alert('Message successfully sent!')
+                window.location.reload(false)
+            }, (error) => {
+                alert('Failed to send the message, please try again')
+                console.log(error.text);
+            });
     };
 
     return (
@@ -80,6 +83,25 @@ const Contact = () => {
                             </ul>
                         </form>
                     </div>
+                </div>
+                <div className="info-map">
+                    Allan Thamvongs,
+                    <br />
+                    France,
+                    <br />
+                    34000 Montpellier
+                    <br />
+                    <span>allan.thvgs@gmail.com</span>
+                </div>
+                <div className="map-wrap">
+                    <MapContainer center={position} zoom={14}>
+                        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                        <Marker position={position}>
+                            <Popup>
+                                Allan is currently working here !
+                            </Popup>
+                        </Marker>
+                    </MapContainer>
                 </div>
             </div>
             <Loader type="pacman" active={true} />

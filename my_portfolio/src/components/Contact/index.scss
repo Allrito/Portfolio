@@ -9,7 +9,8 @@
     width: 100%;
     margin-top: 20px;
 
-    input, textarea {
+    input,
+    textarea {
         font-family: 'Handjet', cursive;
     }
 
@@ -17,7 +18,7 @@
         padding: 0;
         margin: 0;
 
-        li{
+        li {
             padding: 0;
             margin: 0;
             list-style: none;
@@ -49,7 +50,7 @@
         border: 0;
         background: #5e0094;
         height: 50px;
-        font-size: 16px;
+        font-size: 18px;
         color: #fff;
         padding: 0 20px;
         box-sizing: border-box;
@@ -60,7 +61,7 @@
         border: 0;
         background: #5e0094;
         height: 50px;
-        font-size: 16px;
+        font-size: 18px;
         color: #fff;
         padding: 20px;
         min-height: 150px;
@@ -71,6 +72,7 @@
         color: #ffd700;
         background: 0 0;
         font: 11px;
+        font-size: 18px;
         letter-spacing: 3px;
         text-decoration: none;
         padding: 8px 10px;
@@ -78,4 +80,49 @@
         float: right;
         border-radius: 4px;
     }
+
+    .flat-button:hover {
+        background: #ffd700;
+        color: #5e0094;
+    }
+}
+
+.info-map {
+    position: absolute;
+    background: #000;
+    top: 50px;
+    right: 30%;
+    z-index: 999999;
+    width: 267px;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Handjet', cursive;
+    font-size: 21px;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeIn 1s 1.5s;
+    animation-fill-mode: forwards;
+
+    span {
+        font-size: 21px;
+        display: block;
+        padding-top: 20px;
+        color: #ffd700;
+    }
+}
+
+.map-wrap {
+    background: rgba(8, 253, 216, 0.1);
+    float: right;
+    width: 53%;
+    height: 100%;
+}
+
+.leaflet-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+    animation: backInRight 1s 1.2s;
+    animation-fill-mode: forwards;
 }
