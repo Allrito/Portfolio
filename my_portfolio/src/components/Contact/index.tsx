@@ -17,7 +17,7 @@ const Contact = () => {
         }, 3000);
     }, []);
 
-    const sendEmail = (e) => {
+    const sendEmail = (e: any) => {
         e.preventDefault();
 
         emailjs.sendForm('', '', form.current, '')

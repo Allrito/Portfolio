@@ -41,7 +41,65 @@
 }
 
 .about-page,
-.contact-page {
+.contact-page,
+.portfolio-page {
+
+    h1 {
+        font-size: 53px;
+        font-family: "Tourney", cursive;
+        color: #ffd700;
+        font-weight: 400;
+        margin-top: 0;
+        position: relative;
+        margin-bottom: 40px;
+        left: 10px;
+
+        &::before {
+            content: '<h1>';
+            font-family: 'Handjet', cursive;
+            font-size: 18px;
+            position: absolute;
+            margin-top: -10px;
+            left: -10px;
+            opacity: 0.6;
+            line-height: 18px;
+        }
+
+        &::after {
+            content: '</h1>';
+            font-family: 'Handjet', cursive;
+            font-size: 18px;
+            line-height: 18px;
+            position: absolute;
+            left: -30px;
+            bottom: -20px;
+            margin-left: 20px;
+            opacity: 0.6;
+        }
+    }
+
+    p {
+        font-style: 13px;
+        color: #fff;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 300;
+        min-width: fit-content;
+        animation: pulse 1s;
+
+        &:nth-of-type(1) {
+            animation-delay: 1.1s;
+        }
+
+        // adding this if I have multiple paragraphs
+        // &:nth-of-type(2) {
+        //     animation-delay: 1.2s;
+        // }
+
+        // &:nth-of-type(3) {
+        //     animation-delay: 1.3s;
+        // }
+    }
+
     .text-zone {
         position: absolute;
         left: 10%;
@@ -52,66 +110,11 @@
         display: table-cell;
         max-height: 90%;
 
-        h1 {
-            font-size: 53px;
-            font-family: "Tourney", cursive;
-            color: #ffd700;
-            font-weight: 400;
-            margin-top: 0;
-            position: relative;
-            margin-bottom: 40px;
-            left: 10px;
-
-            &::before {
-                content: '<h1>';
-                font-family: 'Handjet', cursive;
-                font-size: 18px;
-                position: absolute;
-                margin-top: -10px;
-                left: -10px;
-                opacity: 0.6;
-                line-height: 18px;
-            }
-
-            &::after {
-                content: '</h1>';
-                font-family: 'Handjet', cursive;
-                font-size: 18px;
-                line-height: 18px;
-                position: absolute;
-                left: -30px;
-                bottom: -20px;
-                margin-left: 20px;
-                opacity: 0.6;
-            }
-        }
-
-        p {
-            font-style: 13px;
-            color: #fff;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 300;
-            min-width: fit-content;
-            animation: pulse 1s;
-
-            &:nth-of-type(1) {
-                animation-delay: 1.1s;
-            }
-
-            // adding this if I have multiple paragraphs
-            // &:nth-of-type(2) {
-            //     animation-delay: 1.2s;
-            // }
-
-            // &:nth-of-type(3) {
-            //     animation-delay: 1.3s;
-            // }
-        }
     }
 
     .text-animate-hover {
         &:hover {
-            color:  #fff;
+            color: #fff;
         }
     }
 }

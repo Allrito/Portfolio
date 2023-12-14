@@ -91,6 +91,13 @@
             }
         }
 
+        a.portfolio-link {
+            &:after {
+                content: 'PORTFOLIO';
+                font-size: 6.5px;
+            }
+        }
+
         a.active {
             svg {
                 color: #ffd700;
