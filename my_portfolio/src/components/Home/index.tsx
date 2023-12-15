@@ -54,7 +54,7 @@ const Home = () => {
             <Logo />
 
             </div>
-            <Loader type="pacman" active={true}/>
+            <Loader type="ball-beat" innerClassName="spinny-loader" active={true} />
         </>
     );
 }

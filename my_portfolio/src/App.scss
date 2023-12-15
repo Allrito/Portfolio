@@ -1,6 +1,5 @@
 $primary-color : #ffd700;
 
-@import '../node_modules/loaders.css/src/animations/pacman.scss';
 @import url('https://fonts.googleapis.com/css2?family=Handjet&family=Orbitron&family=Tourney&display=swap');
 @import 'animate.css';
 
@@ -29,7 +28,7 @@ $primary-color : #ffd700;
 
 input,
 textarea {
-  font-family: 'Tourney', cursive; 
+  font-family: 'Tourney', cursive;
 }
 
 .loader-active {
@@ -44,4 +43,70 @@ textarea {
   height: 50px;
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
+}
+
+@keyframes spinny {
+  0% {
+    transform-origin:50%;
+    transform:translate3d(-50%, -50%, 0) rotateZ(0deg);
+  }
+  100% {
+    transform:translate3d(-50%, -50%, 0) rotateZ(360deg);
+  }
+}
+
+.spinny-loader > div {
+  position:absolute;
+  top:50%;
+  left:50%;
+  display:block;
+  width:60px;
+  height:60px;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius:200px;
+  background-color:#ffd700;
+}
+
+.spinny-loader::before, .spinny-loader::after {
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  display:block;
+
+  border-radius:200px;
+  border-style:solid;
+  border-width:15px;
+  border-color:#ffd700 transparent #ffd700 transparent;
+
+  animation-name:spinny;
+  animation-duration: 0.6s;
+  animation-iteration-count:infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.spinny-loader::after {
+  width:140px;
+  height:140px;
+  animation-direction: alternate-reverse;
+}
+
+.spinny-loader::before {
+  width:100px;
+  height:100px;
+}
+
+.spinny-loader.error > div {
+  background-color:#ec5840;
+}
+.spinny-loader.error::before, .spinny-loader.error::after {
+  border-color:#ec5840 transparent #ec5840 transparent;
+  animation-timing-function: linear;
+}
+.spinny-loader.error::before {
+  animation-duration: 2.5s;
+}
+.spinny-loader.error::after {
+  animation-duration: 3.8s;
+  animation-direction: reverse;
 }
