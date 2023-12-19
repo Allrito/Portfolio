@@ -18,16 +18,16 @@ const Sidebar = () => {
             <img src={sublogo} alt="sublogo" className="sub-logo" />
         </Link>
         <nav className={showNav ? 'mobile-show' : ''}>
-            <NavLink to="/">
+            <NavLink onClick={() => setShowNav(false)} to="/">
                 <FontAwesomeIcon icon={faHome} color='#4d4d4e' />
             </NavLink>
-            <NavLink className="about-link" to="/about">
+            <NavLink onClick={() => setShowNav(false)} className="about-link" to="/about">
                 <FontAwesomeIcon icon={faBook} color='#4d4d4e' />
             </NavLink>
-            <NavLink className="portfolio-link" to="/portfolio">
+            <NavLink onClick={() => setShowNav(false)} className="portfolio-link" to="/portfolio">
                 <FontAwesomeIcon icon={faSuitcase} color='#4d4d4e' />
             </NavLink>
-            <NavLink className="contact-link" to="/contact">
+            <NavLink onClick={() => setShowNav(false)} className="contact-link" to="/contact">
                 <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e' />
             </NavLink>
 

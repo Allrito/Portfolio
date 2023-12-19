@@ -28,7 +28,6 @@
         }
 
         &::after {
-            // content: '<h1>';
             content: '</h1>';
             font-family: 'Handjet', cursive;
             color: #ffd700;
@@ -78,6 +77,70 @@
         &:hover {
             background: #ffd700;
             color: #333;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .tags,
+    .home-page h1::before,
+    .home-page h1::after {
+        display: none;
+    }
+
+    .home-page {
+
+        h1 {
+            font-size: 39.5px;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .text-zone {
+            position: initial;
+            width: 100%;
+            transform: none;
+            // // padding: 10px;
+            box-sizing: border-box;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 45vh;
+            text-align: center;
+        }
+
+        .flat-button {
+            float: none;
+            display: block;
+            margin: 20px auto 0 auto;
+            width: 170px;
+            text-align: center;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 200px;
+            height: auto;
+            top: 50px;
+            right: 0;
+            box-sizing: border-box;
+            margin: auto;
+            left: 0;
+
+            svg {
+                position: absolute;
+                top: auto;
+                right: auto;
+                bottom: auto;
+                left: 0;
+                margin: auto;
+            }
         }
     }
 }

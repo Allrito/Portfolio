@@ -75,6 +75,7 @@
             &:first-child {
                 &::after {
                     content: 'HOME';
+                    color: #ffd700;
                 }
             }
         }
@@ -82,12 +83,14 @@
         a.about-link {
             &:after {
                 content: 'ABOUT';
+                color: #ffd700;
             }
         }
 
         a.contact-link {
             &:after {
                 content: 'CONTACT';
+                color: #ffd700;
             }
         }
 
@@ -95,6 +98,7 @@
             &:after {
                 content: 'PORTFOLIO';
                 font-size: 6.5px;
+                color: #ffd700;
             }
         }
 
@@ -143,6 +147,11 @@
         height: auto;
         min-height: auto;
 
+        display: flex;            /* Enables flexbox */
+        flex-direction: column;   /* Stack items vertically */
+        justify-content: center;  /* Center items vertically */
+        align-items: center;
+
         ul,
         nav {
             display: none;
@@ -158,6 +167,7 @@
             position: fixed;
             z-index: 2;
             margin: 0;
+            padding-top: 350px;
 
             a {
                 display: flex;
@@ -170,6 +180,14 @@
                 position: initial;
                 width: auto;
                 margin-left: 10px;
+            }
+
+            a.portfolio-link {
+                &:after {
+                    content: 'PORTFOLIO';
+                    font-size: 8.5px;
+                    color: #ffd700;
+                }
             }
 
             a svg {
