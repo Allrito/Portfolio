@@ -74,7 +74,7 @@
 
             &:first-child {
                 &::after {
-                    content: 'HOME';
+                    content: 'ACCUEIL';
                     color: #ffd700;
                 }
             }
@@ -82,7 +82,7 @@
 
         a.about-link {
             &:after {
-                content: 'ABOUT';
+                content: 'INFOS';
                 color: #ffd700;
             }
         }
@@ -96,8 +96,7 @@
 
         a.portfolio-link {
             &:after {
-                content: 'PORTFOLIO';
-                font-size: 6.5px;
+                content: 'PROJETS';
                 color: #ffd700;
             }
         }
@@ -174,14 +173,6 @@
                 position: initial;
                 width: auto;
                 margin-left: 10px;
-            }
-
-            a.portfolio-link {
-                &:after {
-                    content: 'PORTFOLIO';
-                    font-size: 8.5px;
-                    color: #ffd700;
-                }
             }
 
             a svg {
